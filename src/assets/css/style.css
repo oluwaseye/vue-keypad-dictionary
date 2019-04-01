@@ -1,7 +1,6 @@
 [v-cloak] {
   display: none;
 }
-
 #app {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -11,34 +10,51 @@
   color: #2c3e50;
   margin-top: 60px;
 }
-
-section{
-      padding: 0 25px;
+section {
+  padding: 0 25px;
 }
 section #app {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+.info {
+  width: 100%;
+}
 #phone {
   width: 50%;
 }
-
 #phone #wrapper {
-  position: relative;
   width: 281px;
-  height: 410px;
+  height: 720px;
   margin: 0 auto 0 auto;
   position: relative;
-  top: 27px;
+  top: 0px;
   padding: 24px 0 0 0;
   background: #fff;
 }
-
+#phone #wrapper input {
+  outline: 0;
+  width: 90%;
+  height: 30px;
+  padding: 9px;
+  font-size: 21px;
+  top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+#phone #wrapper input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#phone #wrapper input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 #phone #wrapper #dialbox {
   position: absolute;
-  top: 0;
+  top: 9%;
   left: 0;
   width: 100%;
   padding: 10px 4px;
@@ -46,14 +62,18 @@ section #app {
   margin: 0 0 30px 0;
   font-size: 36px;
   border: 0;
-  outline:0;
+  outline: 0;
   text-shadow: 0 0 0 #000;
-    color: transparent;
-    pointer-events:none;
+  color: transparent;
+  pointer-events: none;
 }
- #phone #wrapper #dialbox:focus {
-   outline: none;
- }
+#phone #wrapper #dialbox:focus {
+  outline: none;
+}
+#phone #wrapper #keypad {
+  position: absolute;
+  top: 18%;
+}
 #phone #wrapper #keypad .key {
   border-radius: 50px 50px 50px 50px;
   color: #444;
@@ -68,16 +88,9 @@ section #app {
   border: 1px solid #444;
   cursor: pointer;
 }
-
-#phone #wrapper #keypad .key.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
 #phone #wrapper #keypad .key:hover {
   background: yellow;
 }
-
 #phone #wrapper #keypad .key span {
   display: block;
   color: #444;
@@ -85,15 +98,16 @@ section #app {
   font-size: 12px;
   text-transform: uppercase;
 }
-
+#phone #wrapper #keypad .key.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 #phone #wrapper #keypad .key.special {
   line-height: 60px;
 }
-
 #phone #wrapper #keypad .key.nb {
   border: none;
 }
-
 #phone #wrapper #keypad .key.phone {
   background: #5CDB74;
   border: none;
@@ -101,38 +115,27 @@ section #app {
   line-height: 60px;
   font-size: 40px;
 }
-
 #phone #wrapper #keypad .key.phone.disabled {
   opacity: 0.5;
   pointer-events: none;
 }
-
-#phone #wrapper #keypad {
-  position: absolute;
-  top: 18%;
-}
 #words {
   width: 50%;
 }
-
 #words .results-found {
   background: #000;
   padding: 20px 10px;
   border-radius: 5px;
 }
-
 #words .results-found h3 {
-  color: #fff;
+  color: #FFF;
 }
-
 #words .data {
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
-
-
 #words .data .word {
   font-size: 22px;
   font-weight: 300;
@@ -140,7 +143,6 @@ section #app {
   padding: 10px;
   margin: 10px;
   background: #888888;
-  color:#fff;
+  color: #FFF;
   border-radius: 5px;
 }
-
