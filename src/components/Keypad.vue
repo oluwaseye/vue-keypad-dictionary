@@ -1,6 +1,7 @@
 <template>
         <div id="phone">
           <div id="wrapper">
+            <input type="number" placeholder="Enter number length" onKeyPress="if(this.value.length==1) return false;" @keyup.enter="addMessage" v-model="txtInput" :maxlength="1">
             <div id="dialbox" ref="dialbox" v-cloak>{{dialed}}</div>            
             <div id="keypad">
               <a class="key" :data-num="1"  @click="dial" v-bind:class="{'disabled': keypad}">1</a>
@@ -31,18 +32,29 @@
 <script>
 export default { 
   name: "Keypad",
+  data: function(){
+    return {
+      txtInput: Number
+    }
+  },
   props :{
     keypad: Boolean,
     dialed: String,
     ele: Object,
+    
   },
   methods:{
     dial(){
       this.$emit('dialNumber', window.event);
+    },
+    addMessage(){
+      this.$emit('addMessage', window.event);
+    },
+    validate(e){
+      if(e.key.length==10 && event.keyCode!=8) return false;
+      //console.log(e.key);
     }
     
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
