@@ -1,4 +1,12 @@
-# vue-keypad-dictionary
+# Vue-Keypad-Dictionary
+
+## Description
+Get all possible combinations from phone keypad letters and search JSON objects of names for possible matches of common first names.
+You can always swap the DATA for another resource of your choice.
+
+
+## Screenshot
+
 
 ## Project setup
 ```
