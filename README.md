@@ -6,7 +6,7 @@ You can always swap the DATA for another resource of your choice.
 
 
 ## Screenshot
-
+![enter image description here](https://github.com/oluwaseye/vue-keypad-dictionary/blob/master/screenshot.png?raw=true)
 
 ## Project setup
 ```
